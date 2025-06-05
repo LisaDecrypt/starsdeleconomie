@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Articles - Stars de l'éco</title>
+  <style>
+    @font-face {
+      font-family: 'Horizon';
+      src: url('Horizon.otf') format('opentype');
+    }
+    body {
+      margin: 0; padding: 20px;
+      background-color: black;
+      color: white;
+      font-family: 'Horizon', sans-serif;
+      animation: fadeIn 2s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    h1 {
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+    .articles-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-grow: 1;
+    }
+    .article-card {
+      background-color: #222;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 15px #FFD700AA;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .article-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #FFD700;
+    }
+    .article-title {
+      color: #FFD700;
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+    .article-description {
+      color: white;
+      font-size: 1em;
+      line-height: 1.4em;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .menu a {
+      color: #FFD700;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      border: 2px solid #FFD700;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+    .menu a:hover {
+      background-color: #FFD700;
+      color: black;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nos articles</h1>
+
+  <div class="articles-container">
+
+    <div class="article-card" onclick="window.location.href='article1.html'">
+      <div class="article-title">Comprendre la BCE : les clés de la politique monétaire</div>
+      <div class="article-description">
+        Un article qui démystifie les décisions de la Banque Centrale Européenne et leur impact sur ton quotidien.
+      </div>
+    </div>
+
+    <div class="article-card" onclick="window.location.href='article2.html'">
+      <div class="article-title">L’économie circulaire, avenir de la planète et des entreprises</div>
+      <div class="article-description">
+        Découvrez comment l’économie circulaire transforme les modèles économiques pour un futur durable.
+      </div>
+    </div>
+
+    <div class="article-card" onclick="window.location.href='article3.html'">
+      <div class="article-title">Les cryptomonnaies expliquées aux débutants</div>
+      <div class="article-description">
+        Tout ce que tu dois savoir sur les cryptomonnaies, sans le jargon compliqué.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+</body>
+</html>
